@@ -33,6 +33,7 @@ GeneratorFactory::~GeneratorFactory()
 #include "SingleParticleGenerator.h"
 #include "Decay0Interface.h"
 #include "IonGenerator.h"
+#include "ECECGenerator.h"
 #include "Na22Generator.h"
 #include "Kr83mGenerator.h"
 #include "SingleParticle2PiGenerator.h"
@@ -52,6 +53,8 @@ G4VPrimaryGenerator* GeneratorFactory::CreateGenerator() const
   else if (name_ == "DECAY0")          p = new Decay0Interface();
 
   else if (name_ == "ION")             p = new IonGenerator();
+
+  else if (name_ == "ECEC")            p = new ECECGenerator();
 
   else if (name_ == "NA22")            p = new Na22Generator();
 
