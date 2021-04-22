@@ -196,7 +196,7 @@ namespace nexus {
       sipmsd->SetTimeBinning(binning_);
 
       G4SDManager::GetSDMpointer()->AddNewDetector(sipmsd);
-      active_logic->SetSensitiveDetector(sipmsd);
+      sipm_logic->SetSensitiveDetector(sipmsd);
     }
 
       // Visibilities

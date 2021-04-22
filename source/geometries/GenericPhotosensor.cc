@@ -73,7 +73,7 @@ void GenericPhotosensor::ComputeDimensions()
   if ((window_thickness_ + sensarea_thickness_ + wls_thickness_) > thickness_) {
     G4Exception("[GenericPhotosensor]", "ComputeDimensions()", FatalException,
                 ("Sensor size too small. Required thickness >= " +
-                 std::to_string(window_thickness_ + sensarea_thickness_ + wls_thickness_) + 
+                 std::to_string(window_thickness_ + sensarea_thickness_ + wls_thickness_) +
                  " mm").data());
   }
 }
@@ -245,6 +245,6 @@ void GenericPhotosensor::Construct()
     sensdet->SetTimeBinning        (time_binning_);
 
     G4SDManager::GetSDMpointer()->AddNewDetector(sensdet);
-    sensarea_logic_vol->SetSensitiveDetector(sensdet);
+    window_logic_vol->SetSensitiveDetector(sensdet);
   }
 }

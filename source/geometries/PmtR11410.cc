@@ -150,13 +150,13 @@ namespace nexus {
 
     // Sensitive detector
     PmtSD* pmtsd = new PmtSD("/PMT_R11410/PmtR11410");
-    if (sd_depth_ == -1) 
+    if (sd_depth_ == -1)
       G4Exception("[PmtR11410]", "Construct()", FatalException,
                   "Sensor Depth must be set before constructing");
     pmtsd->SetDetectorVolumeDepth(sd_depth_);
     pmtsd->SetTimeBinning(binning_);
     G4SDManager::GetSDMpointer()->AddNewDetector(pmtsd);
-    photocathode_logic->SetSensitiveDetector(pmtsd);
+    window_logic->SetSensitiveDetector(pmtsd);
 
 
     // VISIBILITIES //////////////////////////////////////////////////
