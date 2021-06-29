@@ -101,6 +101,9 @@ namespace nexus {
     /// High density polyethylene
     static G4Material* HDPE();
 
+    /// PE1000 (PE UHMW, ultra-high molecular weight polyethylene)
+    static G4Material* PE1000();
+
     /// Optical Silicone
     static G4Material* OpticalSilicone();
 
